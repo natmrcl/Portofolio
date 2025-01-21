@@ -1,0 +1,122 @@
+#hero {
+  height: calc(100vh - 5rem);
+  width: 100vw;
+  max-width: 75rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* .profile {
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  z-index: -1;
+  object-fit: cover;
+  height: 70vh;
+} */
+
+.introContent {
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+  font-size: 5rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  margin-top: 8rem;
+}
+
+.hello {
+  font-size: 1.75rem;
+  font-weight: 100;
+}
+
+.introName {
+  color: #00d1b2;
+}
+
+.introPara {
+  font-size: medium;
+  font-weight: 100;
+}
+
+.highlight {
+  font-weight: 300;
+}
+.social-media {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.social-media a {
+  margin-right: 15px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 2rem;
+}
+
+.social-media a:hover {
+  color: #a1a1a1;
+}
+
+.heroLogo {
+  display: block;
+  margin: 20px auto 0; /* Pusatkan logo di bawah konten */
+  width: 100px; /* Ukuran logo */
+  height: auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.logo {
+  margin: 0 auto;
+}
+
+.logo:hover {
+  transform: rotate(-5deg);
+  animation: shake 0.8s ease-in-out infinite;
+  cursor: pointer;
+  /* transform: scale(1.1) rotate(5deg); */
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.tooltip {
+  position: absolute;
+  transform: translateX(-50%);
+  bottom: 105%;
+  /* background-color: #1a1a1a;
+  color: white; */
+  background: white;
+  color: black;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.icon-container:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}

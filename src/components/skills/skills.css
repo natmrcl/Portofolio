@@ -1,0 +1,123 @@
+#skills {
+  overflow: hidden;
+  width: 100vw;
+  max-width: 65rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.skillTitle {
+  font-size: 3rem;
+  font-weight: 600;
+  padding-top: 3rem;
+  margin-bottom: 1.5rem;
+  color: #00d1b2;
+}
+
+.skillDesc {
+  font-weight: 400;
+  font-size: 1rem;
+  max-width: 51rem;
+  padding: 0 2rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  perspective: 1000px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 400px;
+  margin-top: 2rem;
+}
+
+.carousel-card {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  background: #1a1a1a;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.5s ease, opacity 0.5s ease, z-index 0s;
+  padding: 0 1rem;
+}
+
+/* .carousel-card.hidden {
+  visibility: hidden;
+} */
+
+.carousel-card.center {
+  z-index: 3;
+  transform: scale(1);
+}
+
+.carousel-card.right {
+  z-index: 2;
+  transform: translateX(200px) scale(0.8);
+  opacity: 0.8;
+  filter: blur(2px);
+}
+
+.carousel-card.left {
+  z-index: 1;
+  transform: translateX(-200px) scale(0.8);
+  opacity: 0.8;
+  filter: blur(2px);
+}
+
+.carousel-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 10%;
+}
+
+.carousel-text {
+  font-size: medium;
+  font-weight: 200;
+}
+
+.carousel-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.carousel-btn {
+  padding: 0.5rem 1rem;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background: #303030;
+}
