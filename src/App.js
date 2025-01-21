@@ -3,6 +3,7 @@ import HeroSection from "./components/hero/hero";
 import Navbar from "./components/navbar/navbar";
 import Skills from "./components/skills/skills";
 import Works from "./components/works/works";
+import "./App.css";
 
 function App() {
   return (

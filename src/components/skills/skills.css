@@ -11,16 +11,15 @@
 }
 
 .skillTitle {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 600;
-  padding-top: 3rem;
   margin-bottom: 1.5rem;
   color: #00d1b2;
 }
 
 .skillDesc {
   font-weight: 400;
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 2vw, 1rem);
   max-width: 51rem;
   padding: 0 2rem;
 }
@@ -47,13 +46,14 @@
   width: 100%;
   overflow: hidden;
   height: 400px;
-  margin-top: 2rem;
+  /* margin-top: 1rem; */
+  /* background-color: #00d1b2; */
 }
 
 .carousel-card {
   position: absolute;
-  width: 300px;
-  height: 400px;
+  width: clamp(300px, 30vw, 330px);
+  height: clamp(300px, 40vh, 400px);
   background: #1a1a1a;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -90,16 +90,17 @@
 }
 
 .carousel-img {
-  width: 100px;
-  height: 100px;
+  width: clamp(80px, 10vw, 100px);
+  height: clamp(80px, 10vw, 100px);
   object-fit: cover;
   margin-bottom: 1rem;
   border-radius: 10%;
 }
 
 .carousel-text {
-  font-size: medium;
-  font-weight: 200;
+  font-size: clamp(0.5rem, 2.5vw, 1rem);
+  font-weight: 300;
+  text-align: center;
 }
 
 .carousel-buttons {
@@ -120,4 +121,10 @@
 
 .carousel-btn:hover {
   background: #303030;
+}
+
+@media (min-width: 1024px) {
+  .carousel-card {
+    height: 400px !important;
+  }
 }

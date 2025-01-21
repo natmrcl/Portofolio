@@ -43,6 +43,7 @@ const Works = () => {
           variants={fadeIn("down", 0.2)}
           initial="hidden"
           whileInView={"show"}
+          viewport={{ once: true }}
           className="works-cards">
           {currentProjects.map((project, index) => (
             <Card

@@ -25,15 +25,15 @@
 }
 
 .worksTitle {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 600;
   margin-bottom: 1rem;
   color: #00d1b2;
 }
 
 .worksDesc {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   font-weight: 400;
-  font-size: 1rem;
   line-height: 1.5;
   max-width: 40rem;
 }

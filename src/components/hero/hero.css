@@ -1,9 +1,9 @@
 #hero {
-  height: calc(100vh - 5rem);
+  height: calc(100vh - 9rem);
   width: 100vw;
   max-width: 75rem;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
 }
 
@@ -17,15 +17,15 @@
 } */
 
 .introContent {
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh; */
+  /* width: 100vw; */
   padding: 2rem;
-  font-size: 5rem;
+  font-size: clamp(3rem, 7vw, 5rem);
   font-weight: 700;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
-  margin-top: 8rem;
+  margin-top: clamp(2rem, 8vw, 8rem);
 }
 
 .hello {
@@ -62,16 +62,16 @@
   color: #a1a1a1;
 }
 
-.heroLogo {
+.logo {
+  /* margin: 0 auto; */
   display: block;
-  margin: 20px auto 0; /* Pusatkan logo di bawah konten */
-  width: 100px; /* Ukuran logo */
   height: auto;
-  animation: fadeIn 1s ease-in-out;
+  margin-left: auto;
+  margin-right: 0;
 }
 
-.logo {
-  margin: 0 auto;
+.logo img {
+  width: clamp(200px, 20vw, 300px);
 }
 
 .logo:hover {
@@ -96,6 +96,12 @@
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo img {
+    width: 300px;
   }
 }
 

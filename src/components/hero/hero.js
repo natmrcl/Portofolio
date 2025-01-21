@@ -65,7 +65,7 @@ const Hero = () => {
             whileInView={"show"}
             viewport={{ once: true }}
             src={logo}
-            width="300px"
+            // width="300px"
             alt="logo"
           />
         </Link>
