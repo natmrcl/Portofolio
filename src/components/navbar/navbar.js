@@ -3,6 +3,9 @@ import "./navbar.css";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { fadeIn } from "../animation/variants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -45,9 +48,15 @@ const Navbar = () => {
           Projects
         </Link>
       </motion.div>
-      <span className="mobMenu" onClick={() => setShowMenu(!showMenu)}>
-        Menu
-      </span>
+      <motion.div
+        variants={fadeIn("down", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: true }}
+        className="mobMenu"
+        onClick={() => setShowMenu(!showMenu)}>
+        <FontAwesomeIcon icon={faBars} />
+      </motion.div>
       <div className="navMenu" style={{ display: showMenu ? "flex" : "none" }}>
         <Link
           activeClass="active"
