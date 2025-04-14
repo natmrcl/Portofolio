@@ -54,7 +54,7 @@ const Card = ({
               </span>
             ))}
           </div>
-          <div className="card-links">
+          {/* <div className="card-links">
             <a
               href={projectLink}
               className="view-project"
@@ -62,7 +62,7 @@ const Card = ({
               rel="noopener noreferrer">
               View Project
             </a>
-          </div>
+          </div> */}
         </div>
         <div className="card-image" onClick={toggleModal}>
           <img src={image[0]} alt={title} />
