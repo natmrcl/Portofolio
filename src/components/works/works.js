@@ -35,8 +35,7 @@ const Works = () => {
           <span>My Work</span>
           <h2 className="worksTitle">Projects.</h2>
           <p className="worksDesc">
-            A collection of projects I've worked on, showcasing my skills and
-            creativity in development and design.
+            A collection of projects I've worked on.
           </p>
         </motion.div>
         <motion.div

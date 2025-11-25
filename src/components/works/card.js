@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./card.css";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 
 const Card = ({
   title,
@@ -24,17 +26,20 @@ const Card = ({
     <div className="modal-overlay" onClick={toggleModal}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <Swiper
+          modules={[Navigation, Pagination]} // ⬅️ Tambahkan modulnya di sini
           navigation
           pagination={{ clickable: true }}
-          className="swiper-container">
+          className="swiper-container"
+        >
           {image.map((img, index) => (
             <SwiperSlide key={index}>
               <img src={img} alt={`${title} - Slide ${index + 1}`} />
             </SwiperSlide>
           ))}
         </Swiper>
+
         <button className="modal-close" onClick={toggleModal}>
-          Close
+          X
         </button>
       </div>
     </div>
@@ -46,6 +51,7 @@ const Card = ({
         <div className="card-content">
           <h3 className="card-title">{title}</h3>
           <p className="card-description">{description}</p>
+
           <div className="card-tools">
             <span>Tools:</span>{" "}
             {tools.map((tool, index) => (
@@ -54,16 +60,8 @@ const Card = ({
               </span>
             ))}
           </div>
-          {/* <div className="card-links">
-            <a
-              href={projectLink}
-              className="view-project"
-              target="_blank"
-              rel="noopener noreferrer">
-              View Project
-            </a>
-          </div> */}
         </div>
+
         <div className="card-image" onClick={toggleModal}>
           <img src={image[0]} alt={title} />
         </div>

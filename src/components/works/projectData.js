@@ -6,6 +6,8 @@ import petro3 from "../../assets/petro3.png";
 import petro4 from "../../assets/petro4.png";
 import game2 from "../../assets/game2.png";
 import dsa from "../../assets/dsa.png";
+import webarts1 from "../../assets/porto1.png";
+import webarts2 from "../../assets/porto2.png";
 
 const projects = [
   {
@@ -16,6 +18,15 @@ const projects = [
     projectLink: "#",
     liveSiteLink: "#",
     images: [game],
+  },
+  {
+    title: "Art Studio Website",
+    description:
+      "A website designed to showcase an artist’s collection of paintings and visual works.",
+    tools: ["ReactJS"],
+    projectLink: "#",
+    liveSiteLink: "#",
+    images: [webarts1, webarts2],
   },
   {
     title: "Project Control Management Website",
